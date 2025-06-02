@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이순우 자기소개</title>
+	<style>
+		body {
+			margin: 0 auto;
+			width: 60%;
+			font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+			color: #404040;
+			font-size: 95%;
+			background-color: #f9f9f9;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+		}
+		#header {
+			background-color: #2255e3;
+			color: white;
+			padding: 10px;
+		}
+		label, #toggle {
+			display: none;
+		}
+		#nav {
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+		}
+		#nav li {
+			list-style: none;
+			margin: 0 20px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		#contents {
+			background-color: white;
+			padding: 30px 0;
+		}
+		#contents h2 {
+			font-size: 24px;
+			color: #1B4F72;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		#contents img.profile {
+			display: block;
+			margin: 10px auto;
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			object-fit: cover;
+		}
+		#contents img.related {
+			display: block;
+			margin: 20px auto;
+			width: 70%;
+			border-radius: 12px;
+		}
+		#contents h3 {
+			text-align: center;
+			color: #2F62B1;
+			margin-top: 30px;
+		}
+		#contents p {
+			padding: 0 10%;
+			line-height: 1.7em;
+			text-align: center;
+			font-size: 1em;
+		}
+		#resume-btn {
+			display: block;
+			width: 200px;
+			margin: 20px auto;
+			padding: 10px;
+			text-align: center;
+			font-weight: bold;
+			background-color: #2F62B1;
+			color: white;
+			border-radius: 6px;
+			text-decoration: none;
+		}
+		#footer {
+			background-color: #323232;
+			color: white;
+			text-align: center;
+			font-size: 0.85em;
+			padding: 10px 0;
+		}
+
+		/* 모바일 */
+		@media screen and (max-width: 480px) {
+			body {
+				width: 100%;
+				font-size: 90%;
+			}
+			#nav {
+				display: none;
+				flex-direction: column;
+				background-color: #2255e3;
+			}
+			#toggle:checked + #nav {
+				display: flex;
+			}
+			label {
+				display: block;
+				text-align: center;
+				background-color: #2255e3;
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 10px;
+				cursor: pointer;
+			}
+			#nav li {
+				margin: 10px 0;
+				text-align: center;
+				border-top: 1px solid #fff;
+				padding: 10px;
+			}
+			#contents img.related {
+				width: 90%;
+			}
+			#contents p {
+				padding: 0 5%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Header & 메뉴 -->
+	<div id="header">
+		<label for="toggle">☰ MENU</label>
+		<input type="checkbox" id="toggle">
+		<ul id="nav">
+			<li><a href="#intro">소개</a></li>
+			<li><a href="#education">학력</a></li>
+			<li><a href="#contact">연락처</a></li>
+		</ul>
+	</div>
+
+	<!-- 본문 -->
+	<div id="contents">
+		<h2 id="intro">안녕하세요! 저는 <strong>이순우</strong>입니다.</h2>
+		<img src="profile.jpg" alt="프로필 사진" class="profile">
+
+		<h3 id="education">학과 / 학년 / 학번</h3>
+		<p>가천대학교 행정학과 4학년<br>학번: 202032845</p>
+
+		<h3>자기소개</h3>
+		<p>공공 정책과 행정 제도에 관심이 많은 대학생입니다.<br>
+		현재는 취업 준비를 위해 자기계발과 자격증 공부에 집중하고 있으며,<br>
+		정책 분석, 지방자치, 조직관리 분야에 열정을 가지고 있습니다.</p>
+		<img src="government.jpg" alt="행정 관련 이미지" class="related">
+
+		<h3>취미</h3>
+		<p>산책, 시사 뉴스 읽기, 영화 감상<br>
+		행정학 이론을 실생활에 연결하는 것을 좋아하며,<br>
+		사람들과 이야기 나누는 것도 즐깁니다.</p>
+
+		<h3 id="contact">연락처</h3>
+		<p>
+			이메일: soonwoolee@example.com<br>
+			휴대폰: 010-1234-5678
+		</p>
+
+		<a href="resume.pdf" download class="resume-btn" id="resume-btn">이력서 다운로드</a>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		© 2025 이순우. All rights reserved.
+	</div>
+</body>
+</html>
